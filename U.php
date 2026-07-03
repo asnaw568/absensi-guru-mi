@@ -1,0 +1,48 @@
+<?php
+/**
+ * Plugin Name: Absensi Guru MI Asnawiyah
+ * Plugin URI: https://yayasankursiya.or.id
+ * Description: Sistem Absensi Guru Yayasan Kursiya.
+ * Version: 1.0.0
+ * Requires at least: 6.5
+ * Requires PHP: 8.1
+ * Author: Yayasan Kursiya
+ * Author URI: https://yayasankursiya.or.id
+ * License: GPL-2.0-or-later
+ * Text Domain: agm
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+/*
+|--------------------------------------------------------------------------
+| Konstanta Plugin
+|--------------------------------------------------------------------------
+*/
+
+define( 'AGM_VERSION', '1.0.0' );
+define( 'AGM_PLUGIN_FILE', __FILE__ );
+define( 'AGM_PLUGIN_PATH', plugin_dir_path( __FILE__ ) );
+define( 'AGM_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
+
+/*
+|--------------------------------------------------------------------------
+| Load File Inti
+|--------------------------------------------------------------------------
+*/
+
+require_once AGM_PLUGIN_PATH . 'app/Core/Plugin.php';
+
+/*
+|--------------------------------------------------------------------------
+| Jalankan Plugin
+|--------------------------------------------------------------------------
+*/
+
+function agm_run_plugin() {
+	return \AGM\Core\Plugin::get_instance();
+}
+
+agm_run_plugin();
