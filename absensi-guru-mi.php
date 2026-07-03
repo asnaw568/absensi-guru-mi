@@ -5,6 +5,7 @@ register_activation_hook(
     __FILE__,
     ['AGM\Database\Installer', 'install']
 );
+
 /**
  * Jalankan Plugin
  */
