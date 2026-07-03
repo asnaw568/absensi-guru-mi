@@ -6,11 +6,7 @@ register_activation_hook(
     ['AGM\Database\Installer', 'install']
 );
 
-/**
- * Jalankan Plugin
- */
-function agm_run_plugin()
-{
+function agm_run_plugin() {
     return \AGM\Core\Plugin::get_instance();
 }
 
